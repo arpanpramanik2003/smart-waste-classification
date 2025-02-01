@@ -45,7 +45,7 @@ This project implements a deep learning model using MobileNet for smart waste cl
 - **Expanded Recycling Information:** Provides more details on how to recycle different waste types.
 
 ## Results
-- **Training Accuracy:** ~95%
+- **Training Accuracy:** ~92%
 - **Validation Accuracy:** ~88%
 - **Loss:** Optimized for minimal classification error
 
