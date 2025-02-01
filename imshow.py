@@ -4,18 +4,15 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Load your trained model (adjust the path if needed)
-model = tf.keras.models.load_model('P:/Documents(p)/Anuranan/best_model.keras')
+# Loading the trained model
+model = tf.keras.models.load_model('best_model.keras')
 
-# Define the target image size (same as used in training)
+# Defining the target image size
 IMG_HEIGHT, IMG_WIDTH = 224, 224
 
-# If you have the class mapping from your training, use that mapping.
-# For example, suppose your training generator produced the following mapping:
-# {'cardboard': 0, 'glass': 1, 'metal': 2, 'paper': 3, 'plastic': 4, 'trash': 5}
-# Then create a reverse mapping as follows:
+# Creating  a reverse mapping as follows:
 class_indices = {'cardboard': 0, 'glass': 1, 'metal': 2, 'paper': 3, 'plastic': 4, 'trash': 5}
-# Reverse the mapping to get index->label
+# Reversing the mapping to get index->label
 idx2label = {v: k for k, v in class_indices.items()}
 
 # Function to load and preprocess the image
@@ -30,8 +27,8 @@ def load_and_preprocess_image(img_path):
     img_array = preprocess_input(img_array)
     return img_array, img
 
-# Path to your real-life test image
-img_path = 'P:/Documents(p)/Anuranan/Test_Data/download (6).jpeg'  # Change this to your image path
+# Path to real-life test image
+img_path = 'download.jpeg'  # Change this to your image path
 
 # Load and preprocess the image
 img_array, original_img = load_and_preprocess_image(img_path)
