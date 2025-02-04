@@ -1,1 +1,1 @@
-web: streamlit run trashnetST.py
+web: streamlit run app.py
