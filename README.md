@@ -32,7 +32,7 @@ This project implements a deep learning model using MobileNet for smart waste cl
    ```
 3. Run the Streamlit app:
    ```bash
-   streamlit run trashnetST.py
+   streamlit run app.py
    ```
 
 ## Usage
